@@ -15,6 +15,9 @@ const Navbar = () => {
         <li>
           <Link to="/manage-tasks">Gestionar Tareas</Link>
         </li>
+        <li>
+          <Link to="/">Pagina Principal</Link>
+        </li>
       </ul>
     </nav>
   );

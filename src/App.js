@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import LoginPage from './Pages/Login/Login';
 import CreateTaskPage from './Pages/CreateTask/CreateTask';
 import ManageTasksPage from './Pages/ManageTasks/ManageTasks';
+import Home from './Pages/Home/Home';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/create-task" element={<CreateTaskPage />} />
           <Route path="/manage-tasks" element={<ManageTasksPage />} />
-          <Route path="/" element={<h1>Bienvenido a la aplicación de gestión de tareas</h1>} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>
