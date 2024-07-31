@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import LoginPage from './Pages/Login/Login';
+import CreateTaskPage from './Pages/CreateTask/CreateTask';
+import ManageTasksPage from './Pages/ManageTasks/ManageTasks';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>Xd</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/create-task" element={<CreateTaskPage />} />
+          <Route path="/manage-tasks" element={<ManageTasksPage />} />
+          <Route path="/" element={<h1>Bienvenido a la aplicación de gestión de tareas</h1>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
